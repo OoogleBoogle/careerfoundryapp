@@ -2,6 +2,7 @@
 
 <div class="container row">
   <h1>Featured Prints</h1>
+  <p>I've been trying to figure out why the 'show' wouldn't work when i produce the layout like this. It all seems to be about the :id. I'm guessing there's a little trick somewhere so one gets applied to each item in the .each method. I've tried doing it by manually adding an id but it's driving me crazy so i'm leaving it till i know more about rails. Feel free to add 'products' with the image URL as <code>/images/California%20Street.jpg</code> and then the show, destroy etc works beautifully.</p>
   <button class="btn" id="new-button"><%= link_to 'Add New Product', new_product_path %></button>
 </div>
 
@@ -10,37 +11,32 @@
 </div>
 
 <div class="container row">
-  <div class="product-item col-xs-6 col-sm-4 col-md-3">
+  <div id="One" class="product-item col-xs-6 col-sm-4 col-md-3">
     <h3>Product 1</h3>
     <img class="img-responsive" src="/images/California%20Street.jpg">
     <p>This is just here as a place holder...I may just move the description to the show page.</p>
-    <button class="btn btn-default">Show..which doesn't work yet</button>
   </div>
     <div class="product-item col-xs-6 col-sm-4 col-md-3">
     <h3>Product 2</h3>
     <img class="img-responsive" src="/images/California%20Street.jpg">
     <p>This is just here as a place holder...I may just move the description to the show page.</p>
-    <button class="btn btn-default">Show..which doesn't work yet</button>
   </div>
   <div class="product-item col-xs-6 col-sm-4 col-md-3">
     <h3>Product 3</h3>
     <img class="img-responsive" src="/images/California%20Street.jpg">
     <p>This is just here as a place holder...I may just move the description to the show page.</p>
-    <button class="btn btn-default">Show..which doesn't work yet</button>
   </div>
   <div class="product-item col-xs-6 col-sm-4 col-md-3">
     <h3>Product 4</h3>
     <img class="img-responsive" src="/images/California%20Street.jpg">
     <p>This is just here as a place holder...I may just move the description to the show page.</p>
-    <button class="btn btn-default">Show..which doesn't work yet</button>
   </div>
   <div class="product-item col-xs-6 col-sm-4 col-md-3">
     <h3>Product 5</h3>
     <img class="img-responsive" src="/images/California%20Street.jpg">
     <p>This is just here as a place holder...I may just move the description to the show page.</p>
-    <button class="btn btn-default">Show..which doesn't work yet</button>
   </div>
-<!--   <% @products.each do |product| %>
+  <% @products.each do |product| %>
     <div class="product-item col-xs-6 col-sm-4 col-md-3">
       <h3><%= product.name %></h3>
       <img class="img-responsive" src="<%= product.image_url %>">
@@ -49,7 +45,7 @@
       <button class="btn btn-default"><%= link_to 'Edit', edit_product_path(product) %></button>
       <button class="btn btn-default"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
     </div>
-  <% end %> -->
+  <% end %>
 </div>
 
 
