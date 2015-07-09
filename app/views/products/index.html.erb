@@ -39,6 +39,7 @@
   <% @products.each do |product| %>
     <div class="product-item col-xs-6 col-sm-4 col-md-3">
       <h3><%= product.name %></h3>
+      <p><%= product.price %></p>
       <img class="img-responsive" src="<%= product.image_url %>">
       <p><%= product.description %></p>
       <button class="btn btn-default"><%= link_to 'Show', product %></button>
