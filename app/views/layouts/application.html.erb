@@ -14,16 +14,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav>
-		<h1>Welcome To the store I haven't set up yet! <small>Coming soon...</small></h1>
-    <ul>
-      <li>Home</li>
-      <li>Shop</li>
-      <li>Contact</li>
-    </ul>
+	<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+      <span class="sr-only">Toggle Navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../static_pages/index">To be decided...</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../static_pages/index">Home</a></li>
+        <li><a href="../products#index">Store</a></li>
+        <li><a href="../static_pages/contact">Contact</a></li>
+      </ul>
+    </div>
 	</nav>
 
 <%= yield %>
 
+
 </body>
 </html>
+    
