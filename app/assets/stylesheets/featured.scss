@@ -1,0 +1,14 @@
+.featured_product {
+	text-align: center;
+	h1 {
+		@media (min-width: 600px) {
+			font-size: 4em;
+		}
+	}
+	img {
+		width: 72%;
+		@media (min-width: 1000px) {
+			width: 34%;
+		}
+	}
+}

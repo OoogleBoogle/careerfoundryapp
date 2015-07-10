@@ -1,4 +1,6 @@
-<div>
-	<h2>Featured Product</h2>
-	<%= @featured_product.name %>
+<div class="container featured_product">
+	<h1>Featured Product</h1>
+	<h2><%= @featured_product.name %></h3>
+	<h3><%= @featured_product.description %></h4>
+	<img src="<%= @featured_product.image_url %>">  
 </div>
