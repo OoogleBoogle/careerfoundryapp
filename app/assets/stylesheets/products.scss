@@ -24,3 +24,11 @@
 .edit-container {
 	@extend .add-container
 }
+.new-container {
+	margin-bottom: 50px;
+	text-align: center;
+	img {
+		max-height: 90vh;
+		margin: 0 auto;
+	}
+}
