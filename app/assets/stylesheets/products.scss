@@ -7,6 +7,13 @@
 #new-button {
 	float: left;
 }
+.product-item {
+	text-align: center;
+	img {
+		max-height: 143px;
+		margin: 0 auto;
+	}
+}
 .btn {
 	padding: 2%;
 	font-size: 0.8em;
