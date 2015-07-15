@@ -19,6 +19,16 @@ body {
 		}
 	}
 }
+.navbar-form {
+	width: 120%;
+	.empty {
+		font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;	
+	}
+}
+
 .jumbotron {
 	background-image: url(/images/California%20Street.jpg);
 	background-repeat: no-repeat;
