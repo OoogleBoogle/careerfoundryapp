@@ -1,4 +1,24 @@
 <header>
 	<h1>Contact Page</h1>
-	<p>I'm guessing we'll be putting some kind of form here...?</p>
 </header>
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+	<div class="col-md-4">
+		<div class="form_group">
+			<%= label_tag :name, "Name" %>
+			<%= text_field_tag :name, nil, class: "form_control", placeholder: "Enter Name." %>
+		</div>
+		<div class="form_group">
+			<%= label_tag :email, "Email" %>
+			<%= text_field_tag :email, nil, class: "form_control", placeholder: "Enter Email." %>
+		</div>
+		<div>
+			<%= label_tag :message, "Message" %>
+			<%= text_area_tag :message, nil, class: "form_control", placeholder: "Leave a Message." %>
+		</div>
+	</div>
+</div>
+<%= submit_tag "Send" %>
+<% end %>
