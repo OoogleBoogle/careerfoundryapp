@@ -12,5 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require turbolinks 
 //= require_tree .
+
+var ready = function() {
+	var $grid = $('.grid').imagesLoaded( function() {
+    $('.grid').masonry({
+		  itemSelector: '.grid-item',
+		  columnWidth: '.grid-sizer',
+		  percentPosition: true
+		});
+	});
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
