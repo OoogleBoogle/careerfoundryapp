@@ -38,6 +38,16 @@
             <%= submit_tag("Search", class: "btn btn-default") %>
           <% end %>
         </li>
+
+        <% if user_signed_in? %>
+          <li class="login">
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'log-btn') %><p class="notice"><%= notice %></p>
+          </li>
+        <% else %>
+          <li class="login">
+            <%= link_to('Log In', new_user_session_path, class: 'log-btn') %><p class="notice"><%= notice %></p>
+          </li>
+        <% end %>
       </ul>
     </div>
 	</nav>

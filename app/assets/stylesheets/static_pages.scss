@@ -10,6 +10,12 @@ body {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
+	.log-btn {
+		display: inline-block;
+	}
+	.notice {
+		display: inline-block;
+	}
 }
 #navbar {
 	a {
