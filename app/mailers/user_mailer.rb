@@ -13,7 +13,7 @@ class UserMailer < ApplicationMailer
 	def thank_you_mail(email, name, message)
 		@message = message
 		mail(
-			:from => 'Simon Attfield',
+			:from => 'simattfield@gmail.com',
 			:to => email,
 			:subject => 'Thanks for your message')
 	end	
