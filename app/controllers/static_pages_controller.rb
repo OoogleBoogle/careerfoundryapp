@@ -16,5 +16,6 @@ class StaticPagesController < ApplicationController
   		:to => 'simattfield@gmail.com',
   		:subject => "A contact message from #{@name}",
   		:body => @message).deliver
+    UserMailer.contact(@email, @name, @message).deliver
   end
 end

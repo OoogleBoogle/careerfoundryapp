@@ -1,0 +1,34 @@
+.contact-form {
+	.row {
+		width: 80%;
+		margin: 5vh auto;
+		@media (min-width: 766px) and (max-width: 994px) {
+			margin-top: 17vh;
+		}
+		@media (min-width: 650px) {
+			width: 60%;
+		}
+		@media (min-width: 800px) {
+			width: 40%;
+		}
+		input[type=submit] {
+			width: 100%;
+	 		padding: 2%;
+	  		margin-top: 3%;
+			background-color: #E8D72E;
+			border-radius: 15px;
+			margin-bottom: 10%;
+		}
+		input[type=text],
+		textarea {
+			width: 100%;
+		}
+		textarea {
+			height: 80px;
+		}
+		label {
+			margin-top: 2%;
+		}
+	}
+
+}

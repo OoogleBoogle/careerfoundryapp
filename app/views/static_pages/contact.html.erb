@@ -1,24 +1,24 @@
-<header>
-	<h1>Contact Page</h1>
-</header>
-<%= flash[:notice] %>
+<div class="contact-form">
+	<%= flash[:notice] %>
 
-<%= form_tag("/static_pages/thank_you") do %>
-<div class="row">
-	<div class="col-md-4">
+	<%= form_tag("/static_pages/thank_you") do %>
+	<div class="row">
+		<header>
+			<h1>Contact Us</h1>
+		</header>
 		<div class="form_group">
-			<%= label_tag :name, "Name" %>
+			<%= label_tag :name, "Name:" %>
 			<%= text_field_tag :name, nil, class: "form_control", placeholder: "Enter Name." %>
 		</div>
 		<div class="form_group">
-			<%= label_tag :email, "Email" %>
+			<%= label_tag :email, "Email:" %>
 			<%= text_field_tag :email, nil, class: "form_control", placeholder: "Enter Email." %>
 		</div>
 		<div>
-			<%= label_tag :message, "Message" %>
+			<%= label_tag :message, "Message:" %>
 			<%= text_area_tag :message, nil, class: "form_control", placeholder: "Leave a Message." %>
 		</div>
+		<%= submit_tag "Send" %>
+		<% end %>
 	</div>
 </div>
-<%= submit_tag "Send" %>
-<% end %>
