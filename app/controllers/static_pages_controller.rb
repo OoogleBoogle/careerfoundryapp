@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   end
 
   def landing_page
-	@products = Product.limit(2)
+    @products = Product.limit(2)
   end
 
   def thank_you
