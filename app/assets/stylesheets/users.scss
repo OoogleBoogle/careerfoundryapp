@@ -1,3 +1,16 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.devise-form {
+	margin-top: 40px;
+  	border-radius: 15px;
+  	padding-bottom: 11px;
+  	background-color: white;
+  	box-shadow: 0px 5px 25px;
+  	.actions > input {
+  		background: linear-gradient(#F8FF9C, #D6FF13);
+  		border: 1px solid gray;
+  		border-radius: 3px;
+  		padding: 3px;
+  	}
+}
