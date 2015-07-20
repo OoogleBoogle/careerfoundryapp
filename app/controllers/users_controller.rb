@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
+  load_and_authorize_resource
   # GET /users
   # GET /users.json
   def index
@@ -60,6 +61,12 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_url, :alert => exception.message
+  end
+    
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

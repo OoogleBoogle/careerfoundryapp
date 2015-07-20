@@ -5,6 +5,8 @@
   <button class="btn" id="new-button"><%= link_to 'Add New Product', new_product_path %></button>
 </div>
 
+<p id="alert" class="notice" style="color:white;"><%= alert %></p>
+
 <div class="grid">
 	<div class="grid-sizer"></div>
   <%= render @products %>
