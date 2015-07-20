@@ -36,9 +36,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li>
-              <%= form_tag('/products', method: "get", class: "navbar-form navbar-left", role: "search") do %>
+              <%= form_tag('/products', method: "get", class: "navbar-form navbar-left", role: "search", type: "search") do %>
               <%= text_field_tag(:q, nil, placeholder: "&#xF002;".html_safe, class: "form-control text-box") %>
-              <%= submit_tag("Search", class: "btn btn-default") %>
+              <!-- <%= submit_tag("Search", class: "btn btn-default") %> -->
               <% end %>
             </li>
           </ul>
