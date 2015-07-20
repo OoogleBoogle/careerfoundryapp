@@ -1,0 +1,13 @@
+.container.row
+	%h1.header Welcome to....
+	%button.btn#newbutton= link_to 'Add New Product', new_product_path
+
+%p#alert.notice{style: "color:white;"}= alert
+
+.grid
+	.grid-sizer
+	= render @products
+
+
+
+
