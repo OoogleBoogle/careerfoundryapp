@@ -2,10 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background-color: #F5E6DA;
+	background-color: black;
 	padding-top: 40px;
 }
 .navbar {
+	background-color: white;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -53,4 +54,8 @@ body {
 	h1 {
 		margin: 2% 7%;
 	}
+}
+.header {
+	color: white;
+	text-align: center; 
 }

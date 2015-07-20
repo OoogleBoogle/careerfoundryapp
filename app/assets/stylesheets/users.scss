@@ -3,15 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .devise-form {
 	margin-top: 40px;
-  	border-radius: 15px;
-  	padding-bottom: 11px;
-    margin-bottom: 20px;
-  	background-color: white;
-  	box-shadow: 0px 5px 25px;
-  	.actions > input {
-  		background: linear-gradient(#F8FF9C, #D6FF13);
-  		border: 1px solid gray;
-  		border-radius: 3px;
-  		padding: 3px;
-  	}
+	border-radius: 15px;
+	padding-bottom: 11px;
+  margin-bottom: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 10px rgba(139,255,251,0.9);
+	.actions > input {
+		background: linear-gradient(#F8FF9C, #D6FF13);
+		border: 1px solid gray;
+		border-radius: 3px;
+		padding: 3px;
+	}
+  .field > input,
+  .form_group > input,
+  .form_group > textarea {
+    border: none;
+    padding: 0.4%;
+    border-bottom: 1px dashed;
+    background-color: white!important;
+  }
 }

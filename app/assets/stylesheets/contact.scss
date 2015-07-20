@@ -2,15 +2,6 @@
 	.row {
 		width: 80%;
 		margin: 5vh auto;
-		@media (min-width: 766px) and (max-width: 994px) {
-			margin-top: 17vh;
-		}
-		@media (min-width: 650px) {
-			width: 60%;
-		}
-		@media (min-width: 800px) {
-			width: 40%;
-		}
 		input[type=submit] {
 			width: 100%;
 	 		padding: 2%;
