@@ -20,6 +20,9 @@ body {
 	.navbar-right {
 		margin-right: 7%;
 	}
+	.log-btn {
+		width: 100%;
+	}
 }
 .navbar-brand > img {
 	width: 20px
@@ -27,7 +30,7 @@ body {
 
 #navbar {
 	a {
-		font-size: 1.6em;
+		font-size: 1.2em;
 		&:hover {
 			background-color: #50D4B0;
 		}
