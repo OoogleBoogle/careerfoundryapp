@@ -1,11 +1,15 @@
-.container.row
-	%h1.header Welcome to....
-	%button.btn#newbutton= link_to 'Add New Product', new_product_path
+-# .container.row
+-# 	%h1.header Welcome to....
+	
 
 %p#alert.notice{style: "color:white;"}= alert
 
 .grid
 	.grid-sizer
+	.gutter-sizer
+	.grid-item.first-item
+		= link_to image_tag("/images/logo_text.svg", class: "img-responsive")
+		-# %button.btn#newbutton= link_to 'Add New Product', new_product_path
 	= render @products
 
 

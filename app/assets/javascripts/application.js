@@ -20,7 +20,8 @@ var ready = function() {
     $('.grid').masonry({
 		  itemSelector: '.grid-item',
 		  columnWidth: '.grid-sizer',
-		  percentPosition: true
+		  percentPosition: true,
+		  gutter: '.gutter-sizer'
 		});
 	});
 };
