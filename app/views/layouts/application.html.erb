@@ -15,56 +15,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav class="navbar navbar-default">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/products/"><img alt="Brand" src="/images/Logo_transparent.png"></a>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-      <span class="sr-only">Toggle Navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to "Home", static_pages_index_path %></li>
-        <li><%= link_to "Store", products_path %></li>
-        <li><%= link_to "Contact", static_pages_contact_path %></li>
-        <!-- <li><%= link_to "Image Carousel", static_pages_landing_page_path %></li> -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li>
-              <%= form_tag('/products', method: "get", class: "navbar-form navbar-left", role: "search", type: "search") do %>
-              <%= text_field_tag(:q, nil, placeholder: "&#xF002;".html_safe, class: "form-control text-box") %>
-              <!-- <%= submit_tag("Search", class: "btn btn-default") %> -->
-              <% end %>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <p class="notice navbar-text"><%= notice %></p>
-          <% if user_signed_in? %>
-            <li class="login dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <%= current_user.email %> <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-              <!-- <span class="navbar-text"><i class="fa fa-user"></i><%= current_user.email %></span> -->
-                <li><%= link_to('My Orders', orders_path) %></li>
-                <li role="seperator" class="divider"></li>
-                <li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'log-btn') %></li>
-              </ul>
-            </li>
-          <% else %>
-            <li class="login">
-              <p class="notice"><%= notice %></p><%= link_to('Log In', new_user_session_path, class: 'log-btn') %>
-            </li>
-          <% end %>
-        </li>
-      </ul>
-    </div>
-	</nav>
+
+<%= render "layouts/navbar" %>
 
 <%= yield %>
 

@@ -3,13 +3,9 @@ Rails.application.routes.draw do
   resources :users
   resources :products
   get 'static_pages/about'
-
   get 'static_pages/contact'
-
   get 'static_pages/index'
-
   get 'static_pages/landing_page'
-
   post 'static_pages/thank_you'
 
   # The priority is based upon order of creation: first created -> highest priority.
