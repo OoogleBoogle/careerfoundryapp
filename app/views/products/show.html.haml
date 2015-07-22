@@ -8,9 +8,15 @@
 	%h3= @product.name
 	%p= @product.description
 	%p= @product.cost
+	%p
+		Average Rating:
+		.rated{data: {score: "#{@product.average_rating}"}}
 	= link_to 'Edit', edit_product_path(@product)
 	|
 	= link_to 'Back', products_path
 
 .container.new-container.col-xs-6.col-md-4
 	=render "new_comment"
+
+.col-xs-12.container
+	=render "show_comments"

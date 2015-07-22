@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
+  resources :orders, only: [:index, :new, :show, :create]
   resources :products do
     resources :comments
   end
@@ -24,7 +25,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     # resources :product
-    resources :orders, only: [:index, :new, :show, :create]
+    
   # Example resource route with options:
   #   resources :products do
   #     member do
