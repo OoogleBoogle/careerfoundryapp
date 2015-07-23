@@ -1,14 +1,26 @@
 - provide(:title, "Show Product")
 %p#notice= notice
 
-.container.new-container
+.container.col-xs-12.col-md-8
+	= image_tag "#{@product.image_url}", class: "img-responsive", alt: "#{@product.description}"
+
+.container.new-container.col-xs-6.col-md-4
 	%h3= @product.name
 	%p= @product.description
 	%p= @product.cost
-	%p= @product.id
+	%p
+		Average Rating:
+		.rated{data: {score: "#{@product.average_rating}"}}
 	= link_to 'Edit', edit_product_path(@product)
 	|
 	= link_to 'Back', products_path
-
 	= link_to "Add to Order", product_orders_path(:product_id => @product.id, :user_id => current_user.id), :method => :post 
 	= image_tag "#{@product.image_url}", class: "img-responsive", alt: "#{@product.description}"
+
+.container.new-container.col-xs-6.col-md-4
+	=render "new_comment"
+
+.col-xs-12.container
+	=render "show_comments"
+	%p= will_paginate @comments
+
