@@ -26,3 +26,6 @@ Product.create(:name => "Chicago", :description => "Chicago skyline", :image_url
 Product.create(:name => "Rue Bourbon", :description => "Classic New Orleans", :image_url => "/images/rue-bourbon.jpg", :cost => "£20", :orientation => "portrait")
 Product.create(:name => "Jetty", :description => "Lake Tahoe Jetty", :image_url => "/images/Jetty-carousel.jpg", :cost => "£20", :orientation => "landscape")
 
+Order.create(product_id: 1, user_id: 1)
+Order.create(product_id: 2, user_id: 2)
+Order.create(product_id: 3, user_id: 2)
