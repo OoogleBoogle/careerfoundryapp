@@ -14,7 +14,18 @@ class OrdersController < ApplicationController
 	end
 
 	def create
+		@order = Order.new(order_params)
+
+		if @order.save
+			redirect_to products_path
+		else
+			redirect_to static_pages_index_path
+		end
 	end
 
+	private
 
+		def order_params
+			params.require(:orders).permit(:user_id, :product_id)
+		end
 end

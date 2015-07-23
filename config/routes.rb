@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :products
-  resources :orders, only: [:index, :new, :show, :create]
-  get 'order/:id' => 'order#show'
+  resources :orders, only: [:index, :new, :show]
+  resources :products do
+    resources :orders, only: [:create]
+  end
+  # post '/products/:id/orders' => 'order#create'
   get 'static_pages/about'
   get 'static_pages/contact'
   get 'static_pages/index'
