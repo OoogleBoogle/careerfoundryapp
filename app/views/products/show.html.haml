@@ -11,8 +11,9 @@
 	%p
 		Average Rating:
 		.rated{data: {score: "#{@product.average_rating}"}}
-	= link_to 'Edit', edit_product_path(@product)
-	|
+	- if signed_in? && current_user.admin?
+		= link_to 'Edit', edit_product_path(@product)
+		|
 	= link_to 'Back', products_path
 
 .container.new-container.col-xs-6.col-md-4
