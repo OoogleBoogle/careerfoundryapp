@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150724171137) do
+
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
@@ -61,7 +63,10 @@ ActiveRecord::Schema.define(version: 20150724171137) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "order_id"
+<<<<<<< HEAD
     t.boolean  "admin",                  default: false, null: false
+=======
+>>>>>>> master
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

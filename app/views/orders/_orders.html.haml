@@ -1,0 +1,5 @@
+.row
+	- @orders.each do |o|
+		.col-xs-12
+			= image_tag("#{o.product.image_url}", class: "img-thumbnail")
+			%span= o.product.name
