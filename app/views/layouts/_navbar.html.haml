@@ -28,7 +28,7 @@
               = current_user.email
               %span.caret
             %ul.dropdown-menu
-              %li= link_to('My Orders', order_path(current_user))
+              %li= link_to('My Orders', user_orders_path(current_user))
               %li.divider{role: "seperator"}
               %li= link_to('Logout', destroy_user_session_path, method: :delete, class: 'log-btn')
         - else

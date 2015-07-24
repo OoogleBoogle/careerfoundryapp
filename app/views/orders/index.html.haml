@@ -1,4 +1,8 @@
 - provide(:title, "My Orders")
 
+%h1 
+	Orders for
+	= @user.email
 
-%h4
+
+= render 'orders'
