@@ -21,7 +21,7 @@
               = text_field_tag(:q, nil, placeholder: "&#xF002;".html_safe, class: "form-control text-box")
     %ul.nav.navbar-nav.navbar-right
       %li
-        %p.notice.navbar-text #{notice}
+        %p.hidden-xs.notice.navbar-text #{notice}
         - if user_signed_in?
           %li.login.dropdown
             %a.dropdown-toggle{:href => '#', :data => {:toggle => "dropdown"}, role: "button", :aria => {:haspopup => "true", :expanded => "false"}}

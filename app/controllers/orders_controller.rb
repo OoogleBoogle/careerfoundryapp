@@ -13,7 +13,9 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		@product = 
+		@product = Product.find(params[:product_id])
+		@user = current_user
+		@order = Order.new(:product_id => @product.id, :user_id => @user.id)
 
 		if @order.save
 			redirect_to products_path
@@ -23,7 +25,7 @@ class OrdersController < ApplicationController
 	end
 
 	private
-		def order_params
-			params.require(:orders).permit(:user_id, :product_id)
-		end
+		# def order_params
+		# 	params.require(:orders).permit(:user_id, :product_id)
+		# end
 end
