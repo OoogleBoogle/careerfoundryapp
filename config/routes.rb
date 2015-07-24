@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :orders, only: [:index, :new, :show, :create]
+  resources :orders, only: [:index, :new, :show]
   resources :products do
     resources :comments
+    resources :orders, only: [:create]
   end
 
   get 'static_pages/about'

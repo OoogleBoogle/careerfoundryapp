@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		@order = Order.new(order_params)
+		@product = 
 
 		if @order.save
 			redirect_to products_path
@@ -23,7 +23,6 @@ class OrdersController < ApplicationController
 	end
 
 	private
-
 		def order_params
 			params.require(:orders).permit(:user_id, :product_id)
 		end
