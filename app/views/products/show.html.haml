@@ -16,7 +16,7 @@
 		|
 	= link_to '- Back -', products_path
 
-	%p= link_to "Add to Order", product_orders_path(@product), :method => :post, class: "add-to-order"
+	%p.order-btn= link_to "Add to Order", product_orders_path(@product), :method => :post, class: "add-to-order"
 
 
 
