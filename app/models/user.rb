@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   after_create :send_sign_in
   def send_sign_in
-    UserMailer.sign_up(self).deliver_later
+  	puts self.first_name
+    # UserMailer.sign_up(self).deliver_later
   end
+
 end
