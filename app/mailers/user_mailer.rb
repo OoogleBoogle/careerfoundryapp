@@ -17,5 +17,13 @@ class UserMailer < ApplicationMailer
 			:from => 'simattfield@gmail.com',
 			:to => email,
 			:subject => 'Thanks for your message')
-	end	
+	end
+
+	def sign_up(user)
+		@user = user
+		mail(
+			:from => 'simattfield@gmail.com',
+			:to => user.email,
+			:subject => 'Thanks for signing up!')
+	end
 end
