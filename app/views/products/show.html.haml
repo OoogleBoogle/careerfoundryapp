@@ -1,7 +1,7 @@
 - provide(:title, "Show Product")
-%p#notice= notice
+-# %p#notice= notice
 
-.container.col-xs-12.col-md-8
+.container.show-img-container.col-xs-12.col-md-8
 	= image_tag "#{@product.image_url}", class: "img-responsive", alt: "#{@product.description}"
 
 .container.new-container.col-xs-6.col-md-4

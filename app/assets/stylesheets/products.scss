@@ -8,10 +8,8 @@
 	float: left;
 }
 .grid {
-	// margin: 2% auto;
 	text-align: center;
 	.img-responsive {
-		// padding: 1%;
 	}
 }
 .grid-item,
@@ -60,9 +58,8 @@
 .new-container {
 	margin-bottom: 50px;
 	text-align: center;
-	img {
-		max-height: 90vh;
-		margin: 0 auto;
+	a:link {
+		color: gray;
 	}
 }
 .order-btn {
@@ -76,4 +73,10 @@
 }
 #comment_body {
 	width: 100%;
+}
+.show-img-container {
+	img {
+		max-height: 86vh;
+  		margin: 3% auto 0;
+  	}
 }
