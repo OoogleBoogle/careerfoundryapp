@@ -7,9 +7,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  after_create :send_sign_in
-  def send_sign_in
+  after_create :send_sign_up
+  def send_sign_up
     UserMailer.sign_up(self).deliver_later
   end
 
+  def name
+    [self.first_name, self.last_name].join(" ")
+  end
 end
